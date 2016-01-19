@@ -1,9 +1,9 @@
 CoreBitcoin
 ===========
 
-CoreBitcoin implements Bitcoin protocol in Objective-C and provides many additional APIs to make great apps.
+CoreBitcoin implements the Bitcoin protocol in Swift/Objective-C, and provides many additional APIs to make great apps.
 
-CoreBitcoin deliberately implements as much as possible directly in Objective-C with limited dependency on OpenSSL. This gives everyone an opportunity to learn Bitcoin on a clean codebase and enables all Mac and iOS developers to extend and improve Bitcoin protocol.
+CoreBitcoin deliberately implements as much as possible directly in Swift/Objective-C with limited dependency on OpenSSL. This gives everyone an opportunity to learn Bitcoin on a clean codebase and enables all Mac and iOS developers to extend and improve Bitcoin protocol.
 
 Note that "Bitcoin Core" (previously known as BitcoinQT or "Satoshi client") is a completely different project.
 
@@ -124,7 +124,7 @@ Swift
 
 We love Swift and design the code to be compatible with Swift. That means using modern enums, favoring initializers over factory methods, avoiding obscure C features etc. You are welcome to try using CoreBitcoin from Swift, please file bugs if you have problems.
 
-Swift is awesome to write crypto in it (due to explicit optionals, generics and first-class structs) and we would love to rewrite the entire CoreBitcoin and even relevant portions of OpenSSL in it. Unfortunately, for a year or two it's just out of the question due to instability. And then, using Swift-only features on the API level would mean that Objective-C code wouldn't be able to use CoreBitcoin. Given that, in the medium term we will focus solely on Objective-C implementation compatible with Swift. When everyone jumps exclusively on Swift, we'll make a complete rewrite.
+Swift is awesome to write crypto in it (due to explicit optionals, generics and first-class structs) and we would love to rewrite the entire CoreBitcoin and even relevant portions of OpenSSL in it. We are currently incrementally rewriting parts of CoreBitcoin in Swift
 
 
 Contribute
