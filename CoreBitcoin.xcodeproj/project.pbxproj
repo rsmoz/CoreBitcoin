@@ -492,6 +492,7 @@
 		75E565AE1B7927C800CCCFA5 /* BTCTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E565AD1B7927C800CCCFA5 /* BTCTransactionTests.swift */; };
 		75EB9FF11B39C61500C26E70 /* BTC256Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB9FF01B39C61500C26E70 /* BTC256Tests.swift */; };
 		75FB13E61B449661006D8935 /* BTCFancyEncryptedMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB13E51B449661006D8935 /* BTCFancyEncryptedMessageTests.swift */; };
+		75FD66AF1C4F4CB600A1DAED /* BlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD66AD1C4F4BB600A1DAED /* BlockHeader.swift */; };
 		C9C3C171195B535500D9F6FB /* BTCChainCom.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C3C16F195B535500D9F6FB /* BTCChainCom.h */; };
 		C9C3C172195B535500D9F6FB /* BTCChainCom.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C3C16F195B535500D9F6FB /* BTCChainCom.h */; };
 		C9C3C173195B535500D9F6FB /* BTCChainCom.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C3C16F195B535500D9F6FB /* BTCChainCom.h */; };
@@ -748,6 +749,7 @@
 		75E565AD1B7927C800CCCFA5 /* BTCTransactionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCTransactionTests.swift; sourceTree = "<group>"; };
 		75EB9FF01B39C61500C26E70 /* BTC256Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTC256Tests.swift; sourceTree = "<group>"; };
 		75FB13E51B449661006D8935 /* BTCFancyEncryptedMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCFancyEncryptedMessageTests.swift; sourceTree = "<group>"; };
+		75FD66AD1C4F4BB600A1DAED /* BlockHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockHeader.swift; sourceTree = "<group>"; };
 		C9C3C16F195B535500D9F6FB /* BTCChainCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCChainCom.h; sourceTree = "<group>"; };
 		C9C3C170195B535500D9F6FB /* BTCChainCom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCChainCom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1218,6 +1220,7 @@
 			children = (
 				755D41E11C4DFAD4003B77BA /* BTCError.swift */,
 				755D41E41C4DFC63003B77BA /* Block.swift */,
+				75FD66AD1C4F4BB600A1DAED /* BlockHeader.swift */,
 			);
 			name = "CoreBitcoin-Swift";
 			sourceTree = "<group>";
@@ -1815,6 +1818,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FD66AF1C4F4CB600A1DAED /* BlockHeader.swift in Sources */,
 				206B015D1835485D00878B8D /* BTCBigNumber.m in Sources */,
 				20D09C5518BC012700794209 /* BTCBlockHeader.m in Sources */,
 				20C2D7FE19E2B2920022CAAC /* BTCMnemonic.m in Sources */,
@@ -2240,18 +2244,23 @@
 		2084DD6717B8FF47005AC9E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2084DD6817B8FF47005AC9E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
